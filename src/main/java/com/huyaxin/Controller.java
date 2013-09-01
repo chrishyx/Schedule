@@ -13,6 +13,7 @@ public class Controller {
                 if (resultMap.get(position) == null) {
                     resultMap.put(position, new ArrayList<String>());
                 }
+                System.out.println(position + " " + person);
                 resultMap.get(position).add(person);
                 persons.remove(person);
             }
@@ -23,9 +24,10 @@ public class Controller {
     private String findOnePerson(Random random, List<String> persons, List<String> yesterday) {
         Set<String> visited = new HashSet<String>();
         while (true) {
-            String person = persons.get(Math.abs(random.nextInt() % persons.size())).trim();
+            int index = Math.abs(random.nextInt() % persons.size());
+            String person = persons.get(index).trim();
             visited.add(person);
-            if (!yesterday.contains(person)) {
+            if (yesterday != null && !yesterday.contains(person)) {
                 return person;
             }
             if (visited.size() == persons.size()) {
@@ -36,6 +38,29 @@ public class Controller {
     }
 
     public static void main(String[] args) {
-
+        Map<String, Integer> positions = new HashMap<String, Integer>();
+        positions.put("A", 1);
+        positions.put("B", 2);
+        positions.put("C", 4);
+        List<String> persons = new ArrayList<String>();
+        persons.add("A1");
+        persons.add("A2");
+        persons.add("A3");
+        persons.add("A4");
+        persons.add("A5");
+        persons.add("A6");
+        persons.add("A7");
+        Controller controller = new Controller();
+        Map<String, List<String>> yesterday = new HashMap<String, List<String>>();
+        yesterday = controller.schedule(positions, persons, yesterday);
+        System.out.println(yesterday);
+        persons.add("A1");
+        persons.add("A2");
+        persons.add("A3");
+        persons.add("A4");
+        persons.add("A5");
+        persons.add("A6");
+        persons.add("A7");
+        System.out.println(controller.schedule(positions, persons, yesterday));
     }
 }
