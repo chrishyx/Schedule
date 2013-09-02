@@ -13,18 +13,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.huyaxin.Controller">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="com.huyaxin.Controller">
   <children>
-    <ListView fx:id="list" prefHeight="276.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="110.0" />
-    <TextField layoutX="10.0" layoutY="14.0" prefWidth="200.0" />
-    <TextField layoutX="10.0" layoutY="44.0" prefWidth="200.0" />
-    <TextField layoutX="10.0" layoutY="74.0" prefWidth="200.0" />
-    <ListView layoutX="229.0" layoutY="44.0" orientation="HORIZONTAL" prefHeight="30.0" prefWidth="357.0" />
-    <ListView layoutX="229.0" layoutY="110.0" orientation="HORIZONTAL" prefHeight="30.0" prefWidth="357.0" />
-    <ListView layoutX="229.0" layoutY="170.0" orientation="HORIZONTAL" prefHeight="216.0" prefWidth="357.0" />
-    <Label layoutX="229.0" layoutY="22.0" text="Label" />
-    <Label layoutX="229.0" layoutY="85.0" text="Label" />
-    <Label layoutX="229.0" layoutY="148.0" text="Label" />
+    <ListView fx:id="list" prefHeight="423.0" prefWidth="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="159.0" />
+    <TextField fx:id="p2" layoutX="179.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="1" text="1" />
+    <TextField fx:id="p3" layoutX="328.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="2" text="2" />
+    <TextField fx:id="p1" layoutX="29.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="4" text="4" />
+    <TextField fx:id="p4" layoutX="478.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="1" text="1" />
+    <Label layoutX="258.0" layoutY="142.0" text="查验大厅" />
+    <Label layoutX="258.0" layoutY="315.0" text="公共库检查" />
+    <Label layoutX="258.0" layoutY="396.0" text="在线检查" />
+    <Label layoutX="258.0" layoutY="509.0" text="卡口" />
+    <ListView fx:id="list2" layoutX="258.0" layoutY="342.0" prefHeight="30.0" prefWidth="497.0" />
+    <ListView fx:id="list3" layoutX="258.0" layoutY="422.0" prefHeight="70.0" prefWidth="497.0" />
+    <ListView fx:id="list4" layoutX="258.0" layoutY="534.0" prefHeight="30.0" prefWidth="497.0" />
+    <ListView fx:id="list1" layoutX="258.0" layoutY="170.0" prefHeight="120.0" prefWidth="497.0" />
+    <Label layoutX="478.0" layoutY="49.0" text="卡口" />
+    <Label layoutX="29.0" layoutY="49.0" text="查验大厅" />
+    <Label layoutX="179.0" layoutY="49.0" text="公共库检查" />
+    <Label layoutX="328.0" layoutY="49.0" text="在线检查" />
+    <Button fx:id="schedule" layoutX="665.0" layoutY="72.0" mnemonicParsing="false" onAction="#processSchedule" prefHeight="30.0" prefWidth="90.0" text="自动派班" />
+    <Label fx:id="date" layoutX="29.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" />
+    <Label fx:id="err" layoutX="27.0" layoutY="108.0" prefHeight="30.0" prefWidth="626.0" />
+    <Button fx:id="save" layoutX="665.0" layoutY="28.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="90.0" text="保存" />
   </children>
   <stylesheets>
     <URL value="@main.css" />

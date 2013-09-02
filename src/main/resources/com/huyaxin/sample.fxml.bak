@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="com.huyaxin.Controller">
   <children>
-    <ListView fx:id="list" prefHeight="423.0" prefWidth="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="159.0" />
+    <ListView fx:id="list" prefHeight="440.0" prefWidth="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="142.0" />
     <TextField fx:id="p2" layoutX="179.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="1" text="1" />
     <TextField fx:id="p3" layoutX="328.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="2" text="2" />
     <TextField fx:id="p1" layoutX="29.0" layoutY="72.0" prefHeight="30.0" prefWidth="115.0" promptText="4" text="4" />
