@@ -1,8 +1,16 @@
 package com.huyaxin;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+
+import java.net.URL;
 import java.util.*;
 
-public class Controller {
+public class Controller implements Initializable {
 
     public Map<String, List<String>> schedule(Map<String, Integer> positions, List<String> persons, Map<String, List<String>> yesterday) {
         Map<String, List<String>> resultMap = new HashMap<String, List<String>>();
@@ -62,5 +70,23 @@ public class Controller {
         persons.add("A6");
         persons.add("A7");
         System.out.println(controller.schedule(positions, persons, yesterday));
+    }
+
+    @FXML
+    ListView<String> list;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> test = FXCollections.observableArrayList();
+        test.add("Person 1");
+        test.add("Person 2");
+
+        System.out.println(list);
+
+        if(list!=null){
+            list.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+            list.setItems(test);
+            System.out.println("test");
+        }
     }
 }
